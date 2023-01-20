@@ -1,0 +1,26 @@
+<div id="agr-navbar">
+    <div class="agr-contacts">
+        <i class="fas fa-phone-alt"></i>
+        <p>+39 351 87 86 453</p>
+        <i class="fas fa-envelope"></i>
+        <p>agrumix@icloud.com</p>
+    </div>
+    <div class="agr-menu">
+        <p (click)="navigateTo('home')">HOME</p>
+        <span>|</span>
+        <p (click)="navigateTo('chisiamo')">CHI SIAMO</p>
+        <span>|</span>
+        <p (click)="navigateTo('contatti')">CONTATTI</p>
+
+
+    </div>
+    <div class="agr-hamburger">
+        <p-button icon="pi pi-bars" label="" (click)="showMenu()" appendTo="body"></p-button>
+        <!-- <p-menu #menu [popup]="true" [model]="items"></p-menu> -->
+    </div>
+</div>
+<div id="agr-navbar-menu">
+    <p (click)="navigateTo('home')">HOME</p>
+    <p (click)="navigateTo('chisiamo')">CHI SIAMO</p>
+    <p (click)="navigateTo('contatti')">CONTATTI</p>
+</div>

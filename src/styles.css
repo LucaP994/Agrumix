@@ -1,1 +1,252 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~primeicons/primeicons.css';
+@import "~primeng/resources/primeng.min.css";
+@font-face {
+    font-family: BrushScript;
+    src: url("assets/font/BrushScriptStd.woff");
+  }
+button {
+    border: none;
+    background: none;
+}
+
+:root {
+    --orange: #ffa710d6;
+    --background: #f8f1e3;
+    --text-orange: #f87630;
+    --orange-dark: #c89742;
+}
+
+body {
+    background-color: var(--background);
+}
+
+#agr-navbar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--orange);
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.5s;
+    backdrop-filter: blur(2px);
+    z-index: 100;
+}
+
+#agr-navbar-menu {
+    position: fixed;
+    display: none;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 5%;
+    height: 0;
+    transition: all 0.5s;
+    background-color: var(--orange);
+    overflow: hidden;
+    color: #ffffff;
+    backdrop-filter: blur(2px);
+    z-index: 100;
+}
+
+#agr-navbar-menu.expanded {
+    /* display: block; */
+    height: 20%;
+}
+
+.agr-contacts {
+    position: relative;
+    /* left: 3em; */
+    margin: 0 auto 0 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#agr-navbar p {
+    font-size: 1em;
+    line-height: 1em;
+    margin: 0 15px 0 5px;
+}
+
+#agr-navbar * {
+    color: #ffffff;
+}
+
+.agr-menu {
+    /* position: relative; */
+    /* right: 3em; */
+    margin: 0 3em 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.agr-menu p {
+    margin: 0 10px 0 10px !important;
+    transition: all 0.2s;
+}
+#agr-navbar-menu p{
+    margin: 10 0 10 0;
+    transition: all 0.2s;
+}
+.agr-menu p:hover, #agr-navbar-menu p:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.agr-bg-img {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    background-image: url("/assets/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: opacity(80%) brightness(0.4);
+    z-index: -1;
+}
+
+.agr-hamburger {
+    margin: 0 3em 0 auto;
+    display: none;
+}
+
+app-footer{
+    position: static;
+    display: block;
+    height: 150px;
+    width: 100%;
+    background: var(--orange-dark);
+    color: white;
+    text-align: center;
+}
+.agr-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px
+}
+.agr-logo{
+    width: 150px;
+    height: 150px;
+    background-image: url("/assets/images/logo-agr.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.brush-text{
+    font-family: 'BrushScript';
+    color: var(--text-orange);
+}
+.agr-text-box{
+    color: #ffffff;
+    margin: 0 10%;
+    height: 300px;
+    overflow-y: scroll;
+    text-align: center;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+    display: none; /*Chrome*/
+}
+.agr-list{
+    display: flex;
+    flex-direction: row;
+}
+.agr-list-item{
+    filter: saturate(0) brightness(0.8) opacity(0.7);
+    margin: 15px 30px;
+    transition: all 0.2s;
+}
+.agr-list-item:hover{
+    filter: saturate(1) brightness(1);
+    cursor: pointer;
+}
+.agr-arancia{
+    width: 20vw;
+    height: 20vw;
+    background-image: url("/assets/images/aran.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.agr-lime{
+    width: 20vw;
+    height: 20vw;
+    background-image: url("/assets/images/lime.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.agr-manda{
+    width: 20vw;
+    height: 20vw;
+    background-image: url("/assets/images/mand.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.agr-limone{
+    width: 20vw;
+    height: 20vw;
+    background-image: url("/assets/images/limo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* media query */
+@media only screen and (max-width: 750px) {
+    .agr-navbar p {
+        font-size: 0.7em;
+        line-height: 0.7em;
+        margin: 0 10px 0 5px;
+    }
+
+    .agr-menu p,
+    .agr-menu span {
+        display: none;
+    }
+
+    .agr-contacts {
+        margin: 0 auto 0 1.5em;
+    }
+
+    .agr-hamburger {
+        display: block !important;
+    }
+    #agr-navbar-menu{
+        display:flex !important;
+    }
+    .agr-list{
+        flex-direction: column;
+    }
+    .agr-arancia{
+        width: 40vw;
+        height: 40vw;
+    }
+    .agr-lime{
+        width: 40vw;
+        height: 40vw;
+    }
+    .agr-manda{
+        width: 40vw;
+        height: 40vw;
+    }
+    .agr-limone{
+        width: 40vw;
+        height: 40vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .agr-contacts{
+        display: none;
+    }
+    .agr-hamburger {
+        margin: 0 1em 0 auto;
+    }
+}
