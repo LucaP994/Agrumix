@@ -5,6 +5,9 @@
     font-family: BrushScript;
     src: url("assets/font/BrushScriptStd.woff");
   }
+*::-webkit-scrollbar {
+    display: none; /*Chrome*/
+}
 button {
     border: none;
     background: none;
@@ -20,7 +23,7 @@ button {
 body {
     background-color: var(--background);
 }
-
+/*=======================header=======================*/
 #agr-navbar {
     position: fixed;
     width: 100%;
@@ -88,15 +91,22 @@ body {
     margin: 0 10px 0 10px !important;
     transition: all 0.2s;
 }
+
 #agr-navbar-menu p{
     margin: 10 0 10 0;
     transition: all 0.2s;
 }
+
 .agr-menu p:hover, #agr-navbar-menu p:hover {
     cursor: pointer;
     font-weight: bold;
 }
 
+.agr-hamburger {
+    margin: 0 3em 0 auto;
+    display: none;
+}
+/*=======================home=======================*/
 .agr-bg-img {
     position: absolute;
     width: 100%;
@@ -109,20 +119,6 @@ body {
     z-index: -1;
 }
 
-.agr-hamburger {
-    margin: 0 3em 0 auto;
-    display: none;
-}
-
-app-footer{
-    position: static;
-    display: block;
-    height: 150px;
-    width: 100%;
-    background: var(--orange-dark);
-    color: white;
-    text-align: center;
-}
 .agr-main{
     display: flex;
     flex-direction: column;
@@ -130,6 +126,7 @@ app-footer{
     justify-content: center;
     padding-top: 40px
 }
+
 .agr-logo{
     width: 150px;
     height: 150px;
@@ -138,10 +135,12 @@ app-footer{
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .brush-text{
     font-family: 'BrushScript';
     color: var(--text-orange);
 }
+
 .agr-text-box{
     color: #ffffff;
     margin: 0 10%;
@@ -151,22 +150,23 @@ app-footer{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
-*::-webkit-scrollbar {
-    display: none; /*Chrome*/
-}
+
 .agr-list{
     display: flex;
     flex-direction: row;
 }
+
 .agr-list-item{
     filter: saturate(0) brightness(0.8) opacity(0.7);
     margin: 15px 30px;
     transition: all 0.2s;
 }
+
 .agr-list-item:hover{
     filter: saturate(1) brightness(1);
     cursor: pointer;
 }
+
 .agr-arancia{
     width: 20vw;
     height: 20vw;
@@ -175,6 +175,7 @@ app-footer{
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .agr-lime{
     width: 20vw;
     height: 20vw;
@@ -183,6 +184,7 @@ app-footer{
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .agr-manda{
     width: 20vw;
     height: 20vw;
@@ -191,6 +193,7 @@ app-footer{
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .agr-limone{
     width: 20vw;
     height: 20vw;
@@ -199,7 +202,109 @@ app-footer{
     background-position: center;
     background-repeat: no-repeat;
 }
-/* media query */
+
+/*===========================footer===========================*/
+
+app-footer{
+    position: static;
+    display: block;
+    /* height: 200px; */
+    width: 100%;
+    background: var(--orange-dark);
+    color: white;
+    text-align: center;
+}
+
+.agr-footer{
+    position:relative;
+    padding: 15px 10%;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+}
+.agr-logo-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0 auto;
+}
+.agr-footer .agr-logo{
+    /* position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(0, -55px); */
+    width: 110px !important;
+    height: 110px !important;
+}
+
+.agr-footer h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.agr-footer p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.agr-contatti{
+    text-align: start;
+    list-style: none;
+    margin: 0 auto 0 auto;
+}
+.agr-link{
+    margin: 0 auto 0 auto;
+}
+.agr-link ul {
+    padding: 0px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-bottom: 10px;
+    text-align: start;
+    list-style: none;
+}
+.agr-link ul i{
+    font-size: 0.8rem !important;
+    font-weight: bold;
+}
+.agr-link ul li:hover, .fb:hover, .ig:hover{
+    cursor: pointer;
+}
+.agr-social{
+    display: flex;
+    justify-content: center;
+}
+.fb{
+    width: 25px;
+    height: 25px;
+    background-image: url("/assets/images/fb.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 5px;
+}
+.ig{
+    width: 25px;
+    height: 25px;
+    background-image: url("/assets/images/ig.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 5px;
+}
+.agr-chisiamo{
+    max-width: 250px;
+    margin: 0 auto 0 auto;
+}
+/*===========================media query===========================*/
+
 @media only screen and (max-width: 750px) {
     .agr-navbar p {
         font-size: 0.7em;
@@ -219,33 +324,49 @@ app-footer{
     .agr-hamburger {
         display: block !important;
     }
+
     #agr-navbar-menu{
         display:flex !important;
     }
+
     .agr-list{
         flex-direction: column;
     }
+
     .agr-arancia{
         width: 40vw;
         height: 40vw;
     }
+
     .agr-lime{
         width: 40vw;
         height: 40vw;
     }
+
     .agr-manda{
         width: 40vw;
         height: 40vw;
     }
+
     .agr-limone{
         width: 40vw;
         height: 40vw;
     }
+    .agr-footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .agr-contatti, .agr-link ul{
+        text-align: center;
+        list-style: none;
+    }
 }
+
 @media only screen and (max-width: 500px) {
     .agr-contacts{
         display: none;
     }
+
     .agr-hamburger {
         margin: 0 1em 0 auto;
     }
