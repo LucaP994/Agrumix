@@ -21,6 +21,7 @@ export class FooterComponent {
       break;
       case "ig":
       window.open("https://www.instagram.com/agrumix.sicilia/");
+      break;
     }
   }
 }
