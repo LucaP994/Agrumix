@@ -8,14 +8,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuModule} from 'primeng/menu'
 import { ButtonModule} from 'primeng/button';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { SchedaAgrumeComponent } from './components/scheda-agrume/scheda-agrume.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    SchedaAgrumeComponent
   ],
   imports: [
     BrowserModule,
